@@ -6,7 +6,7 @@ node_repl_history
 build/Release
 jspm_packages
 *.pyc
-.npm
+*.npm
 
 *.pid
 *.seed
