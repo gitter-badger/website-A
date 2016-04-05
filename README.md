@@ -9,6 +9,8 @@
 linux下可能需要sudo的权限
 
 ###参考资料
-[django基础资料](https://docs.djangoproject.com/en/1.9/)
-[django-rest-framework](http://www.django-rest-framework.org/)
-[REST知呼上的解答](https://www.zhihu.com/question/28557115)
++[django基础资料](https://docs.djangoproject.com/en/1.9/)
+
++[django-rest-framework](http://www.django-rest-framework.org/)
+
++[REST知呼上的解答](https://www.zhihu.com/question/28557115)
