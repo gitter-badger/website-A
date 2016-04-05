@@ -21,10 +21,10 @@ class NewsDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = NewsSerializer
 
 
-class NewsCategoryList():
+class NewsCategoryList(generics.ListCreateAPIView):
     queryset = NewsCategory.objects.all()
     serializer_class = NewsCategorySerializer
 
-class NewsCategoryDetail():
+class NewsCategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = NewsCategory.objects.all()
     serializer_class = NewsCategorySerializer

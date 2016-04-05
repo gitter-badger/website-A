@@ -4,11 +4,11 @@
 $(function(){
   //
   $.ajax({
-      url:'/api/news/create',
+      url:'/api/v1/news/11/',
       // dataType:'json',
       contentType:'application/json',
-      method:'post',
-      data:JSON.stringify({news_title:'123'})
+      method:'get',
+      data:JSON.stringify({news_title:'aaa'})
   })
   .error(function(err){
     console.log(err)
