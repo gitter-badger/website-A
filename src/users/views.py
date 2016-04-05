@@ -1,8 +1,13 @@
-from rest_framework import viewsets
+from rest_framework import generics
 from django.contrib.auth.models import User
 from users.serializers import UserSerializer
 
-# Create your views here.
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all().order_by("data_joined")
+
+class UserList(generics.ListCreateAPIView):
+    queryset = User.objects.all().order_by('date_join')
+    serializer_class = UserSerializer
+
+
+class UserDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all().order_by('date_join')
     serializer_class = UserSerializer

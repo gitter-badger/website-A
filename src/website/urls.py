@@ -15,13 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url,include
-from rest_framework import routers
-from users import views
+from users import views as users_views
+from client import views as client_views
+from news import views as news_views
 
-router = routers.DefaultRouter()
-router.register(r'users',views.UserViewSet)
 
 urlpatterns = [
-    url(r'^',include(router.urls)),
-    url(r'^api-auth/',include('rest_framework.urls',namespace = 'rest_framework'))
+    url(r'^$',client_views.index,name="index"),
+    url(r'^index.*',client_views.index),
+    url(r'^in$',client_views.signin,name='sign-in'),
+    url(r'dashboard$',client_views.dashboard,name='dashboard'),
+    # url(r'^',include(news_urls)),
+    url(r'^api/news/',news_views.NewsList.as_view()),
+    url(r'^api/news/(?P<pk>[0-9]+)/$', news_views.NewsDetail.as_view()),
+    url(r'^api/users/$', users_views.UserList.as_view()),
+    url(r'^api/users/(?P<pk>[0-9]+)/$', users_views.UserDetail.as_view()),
 ]
