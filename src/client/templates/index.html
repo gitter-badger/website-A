@@ -12,20 +12,24 @@
 
         <link rel="stylesheet" href="{% static "css/normalize.css"%}">
         <link rel="stylesheet" href="{% static "index/main.css" %}">
-
+        <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="{% static "vendor/modernizr-2.8.3.min.js"%}"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">您的浏览器已经<strong>落伍了</strong><a href="http://browsehappy.com/">换新浏览器</a>改善体验。</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
+        <div class="head-imge">
+          <div class="head-imge-cover"></div>
+          <canvas id="canvas"></canvas>
+          <img class="head-imge-imge" />
+        </div>
 
         <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{% static "vendor/jquery-1.12.2.min.js" %}" ><\/script>')</script>
+        <script>window.jQuery ||
+         document.write('<script src="{% static "vendor/jquery-1.12.2.min.js" %}" ><\/script>')
+         </script>
         <script src="{% static "index/app.js" %}"></script>
     </body>
 </html>
