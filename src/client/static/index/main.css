@@ -1,0 +1,77 @@
+
+.head{
+
+}
+
+.head-canvas{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  z-index: 30;
+  transition-duration: 6s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  /*display: none;*/
+}
+
+.head-canvas-hide{
+  opacity: 0;
+}
+
+.head-image-cover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: .1;
+  z-index: 50;
+}
+
+.head-image-image{
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+  background-size: cover;
+  opacity: 0;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  z-index: 40;
+}
+
+.head-arrow{
+
+}
+
+.head-image-image-active{
+  opacity: 1;
+}
+
+.nav{
+  width: 100%;
+  height: 50px;
+}
+
+.nav-active{
+
+}
+
+.nav-logo{
+
+}
+
+.nav-group{
+
+}
+
+.nav-item{
+
+}
+
+.center-news{
+
+}
