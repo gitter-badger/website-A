@@ -14,3 +14,5 @@ linux下可能需要sudo的权限
 [django-rest-framework](http://www.django-rest-framework.org/)
 
 [REST知呼上的解答](https://www.zhihu.com/question/28557115)
+
+[ ==> gitter](https://gitter.im/guokeke/website-A?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
