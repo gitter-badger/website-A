@@ -34,6 +34,7 @@ $(function(){
 
       return this.bind()
     },
+
     bind:function(){
 
       return this
@@ -48,19 +49,23 @@ $(function(){
 
       this.setWidth(canvas,this.headerWidth)
       this.setHeight(canvas,this.headerHeight)
+      this.setHeight(image,this.headerHeight)
+      
       // 这是预览效果
       var m = new Image()
       m.src = 'http://7xsoiv.com2.z0.glb.clouddn.com/img-1.jpg?imageView2/2/w/500/h/500/interlace/0/q/100'
+      // 图片跨源
       m.crossOrigin = "Anonymous";
       m.onload = function(){
         ctx.drawImage(m,0,0,self.headerWidth,self.headerHeight)
+        // 将图片模糊
         StackBlur.canvasRGBA(canvas[0], 0, 0, self.headerWidth, self.headerHeight, 8)
       }
       this.preLoadHeaderImage(image,'//7xsoiv.com2.z0.glb.clouddn.com/img-1.jpg',function(){
         image.addClass('head-image-image-active')
         canvas.addClass('head-canvas-hide')
       })
-      this.setHeight(image,this.headerHeight)
+
       return this
     },
 
