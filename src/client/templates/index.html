@@ -10,22 +10,188 @@
 
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="{% static "css/normalize.css"%}">
+        <!-- <link rel="stylesheet" href="{% static "css/normalize.css"%}"> -->
+        <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="{% static "index/main.css" %}">
-
         <script src="{% static "vendor/modernizr-2.8.3.min.js"%}"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">您的浏览器已经<strong>落伍了</strong><a href="http://browsehappy.com/">换新浏览器</a>改善体验。</p>
         <![endif]-->
+      <div class="container-fluid">
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <section class="row head">
+          <div class="head-image-cover"></div>
+          <canvas class="head-canvas"></canvas>
+          <img class="head-image-image" src='http://7xsoiv.com2.z0.glb.clouddn.com/img-1.jpg'/>
+        </section>
 
+        <nav class="row nav">
+          <div class="col-md-3 col-md-offset-1">
+            <div class="nav-logo"></div>
+          </div>
+          <div class="col-md-8">
+            <div class="nav-group">
+              <div class="nav-item">首页</div>
+              <div class="nav-item">中心动态</div>
+              <div class="nav-item">创新实验室</div>
+              <div class="nav-item">人才培养</div>
+              <div class="nav-item">学生社团</div>
+              <div class="nav-item">成果展示</div>
+              <div class="nav-item">下载中心</div>
+            </div>
+          </div>
+        </nav>
+
+        <section class="row central-news">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-offset-4 col-md-4 center-news-title">
+                <h3>中心动态</h3>
+                <p>Central Dynamics</p>
+                <div class="line-1"></div>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-md-offset-3 col-md-6">
+                <div class="line-2"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-md-4">
+                  <div class="center-news-icon">
+                    <img class="center-news-icon-img" src="http://7xsoiv.com2.z0.glb.clouddn.com/icon.4.png" alt="中心新闻" />
+                    <div class="center-news-icon-name">中心新闻</div>
+                  </div>
+                  <ul class="center-news-out">
+                    <li class="center-news-item">
+                      <a class="center-news-title">我校临床医学院成为世界第一</a>
+                      <span class="center-news-posted-time">2016-04-1</span>
+                    </li>
+                    <li class="center-news-item">
+                      <a class="center-news-title">我校临床医学院成为世界第一</a>
+                      <span class="center-news-posted-time">2016-04-1</span>
+                    </li>
+                    <li class="center-news-item">
+                      <a class="center-news-title">我校临床医学院成为世界第一</a>
+                      <span class="center-news-posted-time">2016-04-1</span>
+                    </li>
+                  </ul>
+              </div>
+
+              <div class="col-xs-6 col-md-4">
+                  <div class="center-news-icon">
+                    <img class="center-news-icon-img" src="http://7xsoiv.com2.z0.glb.clouddn.com/icon.4.png" alt="中心新闻" />
+                    <div class="center-news-icon-name">中心新闻</div>
+                  </div>
+                  <ul class="center-news-out">
+                    <li class="center-news-item">
+                      <a class="center-news-title">我校临床医学院成为世界第一</a>
+                      <span class="center-news-posted-time">2016-04-1</span>
+                    </li>
+                    <li class="center-news-item">
+                      <a class="center-news-title">我校临床医学院成为世界第一</a>
+                      <span class="center-news-posted-time">2016-04-1</span>
+                    </li>
+                    <li class="center-news-item">
+                      <a class="center-news-title">我校临床医学院成为世界第一</a>
+                      <span class="center-news-posted-time">2016-04-1</span>
+                    </li>
+                  </ul>
+              </div>
+
+              <div class="col-xs-6 col-md-4">
+                  <div class="center-news-icon">
+                    <img class="center-news-icon-img" src="http://7xsoiv.com2.z0.glb.clouddn.com/icon.4.png" alt="中心新闻" />
+                    <div class="center-news-icon-name">中心新闻</div>
+                  </div>
+                  <ul class="center-news-out">
+                    <li class="center-news-item">
+                      <a class="center-news-title">我校临床医学院成为世界第一</a>
+                      <span class="center-news-posted-time">2016-04-1</span>
+                    </li>
+                    <li class="center-news-item">
+                      <a class="center-news-title">我校临床医学院成为世界第一</a>
+                      <span class="center-news-posted-time">2016-04-1</span>
+                    </li>
+                    <li class="center-news-item">
+                      <a class="center-news-title">我校临床医学院成为世界第一</a>
+                      <span class="center-news-posted-time">2016-04-1</span>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="text">
+
+          </div>
+          <div class="center-news-group">
+            <div class="center-new-item"></div>
+            <div class="center-new-item"></div>
+            <div class="center-new-item"></div>
+          </div>
+        </section>
+
+        <section>
+          <div class="bc"></div>
+
+        </section>
+
+        <section class="center-profile">
+          <div class="container">
+            <div class="row">
+              <h3>中心简介</h3>
+              <p>Center Profile</p>
+              <div class="line-1"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-4"></div>
+              <div class="col-md-4"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="innovation-practice">
+          <div class="row">
+            <h3>成果展示墙</h3>
+            <p>Innovation Practice</p>
+            <div class="line"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+          </div>
+        </section>
+
+        <section class="laboratory-introduction">
+          <div class="row">
+            <h3>实验室介绍</h3>
+            <p>
+              Laboratory Introduction
+            </p>
+            <div class="line-1"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+          </div>
+        </section>
+
+      </div>
 
         <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{% static "vendor/jquery-1.12.2.min.js" %}" ><\/script>')</script>
+        <script>window.jQuery ||
+         document.write('<script src="{% static "vendor/jquery-1.12.2.min.js" %}" ><\/script>')
+         </script>
+        <script type="text/javascript" src="{% static "index/stackblur.min.js" %}"></script>
         <script src="{% static "index/app.js" %}"></script>
     </body>
 </html>

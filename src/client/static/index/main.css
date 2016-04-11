@@ -1,0 +1,156 @@
+
+.head{
+
+}
+
+.head-canvas{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  z-index: 30;
+  transition-duration: 6s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  /*display: none;*/
+}
+
+.head-canvas-hide{
+  opacity: 0;
+}
+
+.head-image-cover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: .1;
+  z-index: 50;
+}
+
+.head-image-image{
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+  background-size: cover;
+  opacity: 0;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  z-index: 40;
+}
+
+.head-arrow{
+
+}
+
+.head-image-image-active{
+  opacity: 1;
+}
+
+.nav{
+  position: relative;
+  font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+  box-shadow: 0px 0px 1px #232323;
+}
+
+.nav-active{
+  position: fixed;
+  top: 0;
+}
+
+.nav-logo{
+  position: relative;
+  background-image: url('http://7xsoiv.com2.z0.glb.clouddn.com/logo.png');
+  background-repeat: no-repeat;
+  height: 78px;
+  width: 100%;
+  background-size: contain;
+}
+
+.nav-group{
+  position: relative;
+}
+
+.nav-item{
+  position: relative;
+  display: inline-block;
+  float: left;
+  padding: 29px;
+  color: #323232;
+}
+
+.nav-item:hover{
+  cursor: pointer;
+  color: #232323;
+}
+
+.center-news{
+  position: relative;
+  width: 100%;
+}
+
+.center-news-title{
+  text-align: center;
+}
+.center-news-title h3{
+  font-size: 42px;
+  margin: 34px 0 0 0;
+}
+.center-news-title p{
+  font-size: 18px;
+  margin: 0;
+}
+
+.line-1{
+  height: 2px;
+  display: inline-block;
+  width: 25%;
+  background-color: #BDBDBD;
+}
+
+.line-2{
+  height: 8px;
+  width: 100%;
+  display: inline-block;
+  background-color: #CECECE;
+}
+
+.center-news-icon{
+  text-align: center;
+}
+.center-news-icon-img{
+  width: 135px;
+  height: 125px;
+}
+.center-news-icon-name{
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: -24px;
+  cursor: default;
+}
+
+.center-news-item{
+  font-size: 13px;
+  color: #666;
+}
+.center-news-out{
+  margin: 25px;
+}
+.center-news-title{
+  cursor: default;
+  color: inherit;
+  text-decoration: blink;
+  max-width: 280px;
+}
+.center-news-title:hover{
+  color: #028796;
+  text-shadow: 0px 0px 1px #3DDDEF;
+  text-decoration: blink;
+}
+.center-news-posted-time{
+  float: right;
+}
