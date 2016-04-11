@@ -1,17 +1,53 @@
+.wrap{
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.section{
+  position: relative;
+}
 
 .head{
-
+  position: relative;
 }
 
 .head-canvas{
-  width: 100%;
-  height:100%;
+  /*宽度有js设置*/
+  max-width: 100%;
+  /*canvas 如果不加上height 100% 数值会有偏差*/
+  height: 100%;
   position: absolute;
   z-index: 30;
   transition-duration: 6s;
   transition-timing-function: ease-in-out;
   opacity: 1;
   /*display: none;*/
+}
+
+.head-image{
+  position: relative;
+  margin:0 -15px;
+}
+
+.head-arrow{
+  position: absolute;
+  width: 62%;
+  left: 19%;
+  top: -128px;
+}
+
+.head-arrow-arrow{
+  position: absolute;
+  width: 100%;
+  height: 128px;
+}
+
+.head-arrow-arrow object{
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  transform: rotateZ(-90deg);
 }
 
 .head-canvas-hide{
@@ -21,7 +57,6 @@
 .head-image-cover{
   position: absolute;
   width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
   bottom: 0;
@@ -35,16 +70,12 @@
   background-position: 0 0;
   background-repeat: no-repeat;
   overflow: hidden;
-  width: 100%;
+  max-width: 100%;
   background-size: cover;
   opacity: 0;
   transition-duration: 3s;
   transition-timing-function: ease-in-out;
   z-index: 40;
-}
-
-.head-arrow{
-
 }
 
 .head-image-image-active{
@@ -55,6 +86,7 @@
   position: relative;
   font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
   box-shadow: 0px 0px 1px #232323;
+  line-height: 1;
 }
 
 .nav-active{
@@ -66,7 +98,7 @@
   position: relative;
   background-image: url('http://7xsoiv.com2.z0.glb.clouddn.com/logo.png');
   background-repeat: no-repeat;
-  height: 78px;
+  height: 68px;
   width: 100%;
   background-size: contain;
 }
@@ -79,7 +111,7 @@
   position: relative;
   display: inline-block;
   float: left;
-  padding: 29px;
+  padding: 27px 18px;
   color: #323232;
 }
 
@@ -88,19 +120,18 @@
   color: #232323;
 }
 
-.center-news{
+.central-news{
   position: relative;
-  width: 100%;
 }
 
-.center-news-title{
+.central-news-head{
   text-align: center;
 }
-.center-news-title h3{
+.central-news-head h3{
   font-size: 42px;
   margin: 34px 0 0 0;
 }
-.center-news-title p{
+.central-news-head p{
   font-size: 18px;
   margin: 0;
 }
@@ -119,38 +150,61 @@
   background-color: #CECECE;
 }
 
-.center-news-icon{
+.central-news-icon{
   text-align: center;
 }
-.center-news-icon-img{
+.central-news-icon-img{
   width: 135px;
   height: 125px;
 }
-.center-news-icon-name{
+.central-news-icon-name{
   font-size: 18px;
   font-weight: 600;
   margin-top: -24px;
   cursor: default;
 }
 
-.center-news-item{
+.central-news-item{
   font-size: 13px;
   color: #666;
 }
-.center-news-out{
+.central-news-out{
   margin: 25px;
 }
-.center-news-title{
+.central-news-title{
   cursor: default;
   color: inherit;
   text-decoration: blink;
   max-width: 280px;
 }
-.center-news-title:hover{
+.central-news-title:hover{
   color: #028796;
   text-shadow: 0px 0px 1px #3DDDEF;
   text-decoration: blink;
 }
-.center-news-posted-time{
+.central-news-posted-time{
   float: right;
+}
+.central-news-wrap{
+  margin: 20px 0px 60px 0px;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+.line-3{
+  position: relative;
+  height: 60px;
+  background-color: #ccc;
+}
+.bc2{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.bc2-text{
+  position: absolute;
+  width: 100%;
+  top: 96px;
+  font-size: 32px;
+  color: #fafafa;
 }
