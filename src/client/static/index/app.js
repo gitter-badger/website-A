@@ -5,7 +5,7 @@ $(function(){
   //
   $.ajax({
       url:'/api/v1/news/11/',
-      // dataType:'json',
+      dataType:'json',
       contentType:'application/json',
       method:'get',
       data:JSON.stringify({news_title:'aaa'})
