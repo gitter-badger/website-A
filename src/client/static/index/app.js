@@ -21,11 +21,43 @@ $(function(){
     $(img).load(callback);
   }
 
+  function debounce(func,wait,immediate){
+    var timeout
+    if(!wait){
+      wait = 250
+    }
+    return function(){
+      var context = this,
+      args = arguments;
+      var later = function() {
+        timeout = null
+        if(!immediate) {
+          func.apply(context,args)
+        }
+      }
+      var callNow = immediate && !timeout
+      clearTimeout(timeout)
+      timeout = setTimeout(later,wait)
+      if(callNow){
+        func.apply(context,args)
+      }
+    }
+  }
+
   app.prototype = {
     init:function(){
 
       this.headerHeight = getHeight()
       this.headerWidth = getWidth()
+
+//    用于存状态
+      this.state = {
+        // 当前窗口距离顶部的高度
+        old_top:-1,
+        nav_top:this.headerHeight,
+        doc_height:$(document).height(),
+        _slide:5,
+      }
 
       return this.setup()
     },
@@ -38,7 +70,15 @@ $(function(){
 
     bind:function(){
 
+      this.bindNavScroll()
+          .bindHeadArrow()
+
       return this
+    },
+
+    setState:function(newState){
+      this.state = Object.assign({},this.state,newState)
+      // return this.state
     },
 
     setupHeader:function(){
@@ -49,6 +89,7 @@ $(function(){
           cover = $('.head-image-cover'),
           head = $('.head')
 
+      //   重新设定图片宽度
       this.setWidth(head[0],this.headerWidth)
       this.setWidth(canvas[0],this.headerWidth)
       this.setWidth(image[0],this.headerWidth)
@@ -89,6 +130,98 @@ $(function(){
 
     setupNav:function(){
 
+    },
+
+    bindNavScroll:function(){
+      var self = this
+
+      // $(window).on('wheel',debounce(function(e){
+      //   self.wheelHandler(e)
+      // },250,false))
+
+      $(window).on('scroll',function(e){
+        self.scrollHandler(e)
+      })
+
+      return this
+    },
+
+    scrollHandler:function(){
+      var current_top = $(document).scrollTop()
+
+      if(current_top < this.state.old_top) {
+
+      } else {
+
+      }
+
+      if(current_top >= this.state.nav_top) {
+        $('.nav').addClass('nav-active')
+        $('.central-news').addClass('central-news-active')
+      } else {
+        $('.nav').removeClass('nav-active')
+        $('.central-news').removeClass('central-news-active')
+      }
+
+    },
+
+    wheelHandler:function(e){
+      // e.preventDefault()
+      var current_top = $(document).scrollTop()
+      if(e.originalEvent.wheelDelta <= 0) {
+        // 向下
+        this.windowGoDown(current_top)
+      } else {
+        // 向上
+        this.windowGoUp(current_top)
+      }
+
+      this.setState({old_top:current_top})
+    },
+
+    windowGoDown:function(current_top){
+      if(current_top < this.state.doc_height - this.headerHeight){
+        this.setScrollTop(current_top + this.headerHeight)
+      } else {
+        this.setScrollTop(this.state.doc_height - this.headerHeight)
+      }
+    },
+
+    windowGoUp:function(current_top){
+      if(current_top - this.headerHeight > 0){
+        this.setScrollTop(current_top - this.headerHeight)
+      } else {
+        this.setScrollTop(0)
+      }
+    },
+
+    setScrollTop:function(value) {
+
+      var set = function(v) {
+        // console.log(v);
+        var current_top = $(document).scrollTop(),
+            dis = value - current_top
+        console.log(v,current_top,dis)
+        if(Math.abs(dis) < 30){
+          $(document).scrollTop(value)
+        } else {
+          $(document).scrollTop(current_top + dis/6)
+          setTimeout(function(){
+                set(value)
+            },25)
+        }
+      }
+      return set(value)
+    },
+
+    bindHeadArrow:function(){
+      var self = this
+      $('.head-arrow-arrow').on('click',function(){
+        // self.windowGoDown($(window).scrollTop())
+        self.setScrollTop(self.headerHeight)
+      })
+
+      return this
     }
 
 
