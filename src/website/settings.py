@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'users',
     'client',
-    'news',
 ]
 
 MIDDLEWARE_CLASSES = [

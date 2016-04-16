@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf.urls import url,include
 from users import views as users_views
 from client import views as client_views
-from news import views as news_views
+# from news import views as news_views
 
 api='api/v1/'
 
@@ -27,11 +27,6 @@ urlpatterns = [
     url(r'^in$',client_views.signin,name='sign-in'),
     url(r'dashboard$',client_views.dashboard,name='dashboard'),
 
-    url(r'^api/v1/news/$',news_views.NewsList.as_view()),
-    url(r'^api/v1/news/(?P<pk>[0-9]+)/$', news_views.NewsDetail.as_view()),
-
-    url(r'^api/v1/newscategorys/$',news_views.NewsCategoryList.as_view()),
-    url(r'^api/v1/newscategorys/(?P<pk>[0-9]+)/$',news_views.NewsCategoryDetail.as_view()),
 
     url(r'^api/v1/users/$', users_views.UserList.as_view()),
     url(r'^api/v1/users/(?P<pk>[0-9]+)/$', users_views.UserDetail.as_view()),
