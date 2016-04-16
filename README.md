@@ -15,4 +15,4 @@ linux下可能需要sudo的权限
 
 [REST知呼上的解答](https://www.zhihu.com/question/28557115)
 
-[![gitter]](https://badges.gitter.im/izhangzhihao/DesignPatterns.svg)](https://gitter.im/guokeke/website-A?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+[![gitter](https://badges.gitter.im/izhangzhihao/DesignPatterns.svg)](https://gitter.im/guokeke/website-A?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
