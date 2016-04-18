@@ -1,6 +1,8 @@
 ## website-A
 ### 华北理工大学以升大学生创新中心
 
+[![Join the chat at https://gitter.im/wemakebug/website-A](https://badges.gitter.im/wemakebug/website-A.svg)](https://gitter.im/wemakebug/website-A?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 可以使用init_dev.py安装必要的库
 +Django 1.9
 +mysqlclient 1.3
